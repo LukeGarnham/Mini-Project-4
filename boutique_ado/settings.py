@@ -33,15 +33,15 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',  # required by allauth
+    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.messages',  # required by allauth
+    'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',  # required by allauth
-    'allauth',  # required by allauth
-    'allauth.account',  # required by allauth
-    'allauth.socialaccount',  # required by allauth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'home',
     'products',
     'bag',
@@ -79,6 +79,8 @@ TEMPLATES = [
         },
     },
 ]
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
